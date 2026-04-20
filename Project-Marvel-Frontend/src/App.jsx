@@ -9,7 +9,6 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import CartPage from "./pages/CartPage";
 import ProductDetails from "./pages/ProductDetails";
-import AuthModal from './components/AuthModal';
 import OrderPlacing from './pages/OrderPlacing';
 import MyOrders from './pages/MyOrders';
 import AdminDashboard from './pages/AdminDashboard';
@@ -74,7 +73,6 @@ function App() {
       </div>
 
       <Footer />
-      <AuthModal />
 
     </BrowserRouter>
   );

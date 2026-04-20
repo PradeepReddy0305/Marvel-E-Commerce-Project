@@ -27,7 +27,7 @@ function Login() {
 
       // console.log("LOGIN RESPONSE:", res.data);
 
-      // ✅ Role-based navigation with a hard redirect to refresh Navbar
+      // Role-based navigation with a hard redirect to refresh Navbar
       if (res.data.role === "ROLE_ADMIN") {
         window.location.assign("/");
       } else {
@@ -45,7 +45,7 @@ function Login() {
       <div className="auth-card">
         <h2 className="auth-title">Log in</h2>
 
-        {/* 📧 EMAIL */}
+        {/* EMAIL */}
         <div className="form-group">
           <label>Email address</label>
           <input
@@ -57,7 +57,7 @@ function Login() {
           />
         </div>
 
-        {/* 🔑 PASSWORD */}
+        {/* PASSWORD */}
         <div className="form-group" style={{ position: 'relative' }}>
           <label>Password</label>
           <input
@@ -76,10 +76,9 @@ function Login() {
           >
             {showPassword ? "👁️" : "👁️‍🗨️"}
           </span>
-          <a href="#" className="forgot-password">Forgot password?</a>
         </div>
 
-        {/* 🚀 LOGIN BUTTON */}
+        {/*  LOGIN BUTTON */}
         <button 
           className={`btn-login ${user.email && user.password ? 'active' : ''}`} 
           onClick={handleLogin}
