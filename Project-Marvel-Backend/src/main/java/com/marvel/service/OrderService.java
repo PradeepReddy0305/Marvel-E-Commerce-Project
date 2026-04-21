@@ -15,7 +15,7 @@ public class OrderService {
     @Autowired
     private OrderRepository repo;
 
-    // ✅ PLACE ORDER
+    // PLACE ORDER
     public List<Order> placeOrders(List<Order> orders) {
 
         for (Order order : orders) {
@@ -26,24 +26,24 @@ public class OrderService {
         return repo.saveAll(orders);
     }
 
-    // ✅ GET USER ORDERS
+    // GET USER ORDERS
     public List<Order> getUserOrders(String username) {
         return repo.findByUsername(username);
     }
 
-    // ✅ GET ALL ORDERS (ADMIN)
+    // GET ALL ORDERS (ADMIN)
     public List<Order> getAllOrders() {
         return repo.findAll();
     }
 
-    // ✅ CANCEL ORDER
+    // CANCEL ORDER
     public Order cancelOrder(Long id) {
         Order order = repo.findById(id).orElseThrow();
         order.setDeliveryStatus("CANCELLED");
         return repo.save(order);
     }
 
-    // ✅ MARK DELIVERED
+    // MARK DELIVERED
     public Order markDelivered(Long id) {
         Order order = repo.findById(id).orElseThrow();
         order.setDeliveryStatus("DELIVERED");

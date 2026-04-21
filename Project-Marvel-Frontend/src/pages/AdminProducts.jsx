@@ -114,7 +114,7 @@ function AdminProducts() {
         </button>
       </div>
 
-      {/* 🔥 PRODUCT CARDS */}
+      {/* PRODUCT CARDS */}
       <div style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
@@ -140,7 +140,7 @@ function AdminProducts() {
             <h4 style={{ color: "#00BFFF" }}>{product.name}</h4>
             <p style={{ color: "#fff" }}>${product.price}</p>
 
-            {/* 🔥 ADMIN BUTTONS */}
+            {/* ADMIN BUTTONS */}
             <div style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
 
               <button

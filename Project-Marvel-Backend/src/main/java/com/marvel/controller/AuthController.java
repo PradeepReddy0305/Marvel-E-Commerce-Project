@@ -21,13 +21,13 @@ public class AuthController {
     @Autowired
     private JwtUtil jwtUtil;
 
-    // 🔐 REGISTER
+    // REGISTER
     @PostMapping("/register")
     public String register(@RequestBody User user) {
         return service.register(user);
     }
 
-    // 🔐 LOGIN
+    // LOGIN
     @PostMapping("/login")
     public Map<String, Object> login(@RequestBody User request) {
 

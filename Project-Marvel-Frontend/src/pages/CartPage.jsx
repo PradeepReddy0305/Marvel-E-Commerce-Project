@@ -32,7 +32,7 @@ function CartPage() {
     }
   }, []);
 
-  // 🔥 FIX: normalize quantity
+  // FIX: normalize quantity
   const [cart, setCart] = useState(() => {
     try {
       const storedCart = localStorage.getItem("cart");
@@ -47,7 +47,7 @@ function CartPage() {
     }
   });
 
-  // ❌ REMOVE
+  // REMOVE
   const removeItem = async (index) => {
     const itemToRemove = cart[index];
     const user = JSON.parse(localStorage.getItem("user"));
@@ -67,7 +67,7 @@ function CartPage() {
     }
   };
 
-  // ➕ FIXED
+  // FIXED
   // Inside increaseQty:
   const increaseQty = (index) => {
     const updated = [...cart];
@@ -79,7 +79,7 @@ function CartPage() {
     updateQtyInDb(updated[index].dbId, 1, updated[index].selectedSize);
   };
 
-  // ➖ FIXED
+  // Inside decreaseQty
   const decreaseQty = (index) => {
     const updated = [...cart];
 
@@ -178,7 +178,7 @@ function CartPage() {
                   <p>Size: {item.selectedSize}</p>
                 )}
 
-                {/* 🔢 QTY FIXED */}
+                {/* QTY FIXED */}
                 <div className="qty-box">
                   <button onClick={() => decreaseQty(index)}>-</button>
                   <span>{item.quantity || 1}</span>
@@ -197,7 +197,7 @@ function CartPage() {
               <div className="cart-price">
                 <p>${item.price}</p>
 
-                {/* 💰 FIXED */}
+                {/* FIXED */}
                 <p className="item-total">
                   ${item.price * (item.quantity || 1)}
                 </p>

@@ -19,12 +19,12 @@ public class ProductService {
                 .orElseThrow(() -> new RuntimeException("Product not found"));
     }
     
- // 🔍 SEARCH
+    // SEARCH
     public List<Product> searchProducts(String keyword) {
         return repo.findByNameContainingIgnoreCase(keyword);
     }
 
-    // 🟡 CATEGORY FILTER
+    // CATEGORY FILTER
     public List<Product> getProductsByCategory(String category) {
         return repo.findByCategoryIgnoreCase(category);
     }

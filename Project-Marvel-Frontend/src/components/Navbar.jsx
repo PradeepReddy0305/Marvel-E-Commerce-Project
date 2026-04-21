@@ -55,14 +55,14 @@ function Navbar({ search, setSearch }) {
           Home
         </Link>
 
-        {/* ❌ HIDE CART FOR ADMIN */}
+        {/* HIDE CART FOR ADMIN */}
         {user?.role !== "ROLE_ADMIN" && (
           <Link className="btn btn-outline-light mx-2" to="/cart">
             Cart 🛒
           </Link>
         )}
 
-        {/* ✅ ADMIN CONTROLS */}
+        {/* ADMIN CONTROLS */}
         {user?.role === "ROLE_ADMIN" && (
           <>
             <Link className="btn btn-warning mx-2" to="/admin-dashboard">
@@ -89,7 +89,7 @@ function Navbar({ search, setSearch }) {
         ) : (
           
           <>
-            {/* ✅ LOGIN BUTTON */}
+            {/* LOGIN BUTTON */}
             <button
               className="btn btn-light mx-2 fw-bold"
               onClick={() => navigate("/login")}

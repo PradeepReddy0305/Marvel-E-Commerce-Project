@@ -12,16 +12,13 @@ public class Product {
 	private Long id;
 
     private String name;
-
     private String description;
-
     private double price;
 
     @Column(name = "image_url")
     private String imageUrl;
 
     private String category;
-    
     private String size;
 
 	public Product() {

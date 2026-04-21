@@ -16,44 +16,44 @@ public class ProductController {
     @Autowired
     private ProductService service;
 
-    // ✅ GET ALL
+    // GET ALL
     @GetMapping
     public List<Product> getAll() {
         return service.getAllProducts();
     }
     
     
- // ✅ GET PRODUCT BY ID
+    // GET PRODUCT BY ID
     @GetMapping("/{id}")
     public Product getProductById(@PathVariable Long id) {
         return service.getProductById(id);
     }
     
- // 🔍 SEARCH PRODUCTS
+    // SEARCH PRODUCTS
     @GetMapping("/search/{keyword}")
     public List<Product> searchProducts(@PathVariable String keyword) {
         return service.searchProducts(keyword);
     }
 
-    // 🟡 FILTER BY CATEGORY
+    // FILTER BY CATEGORY
     @GetMapping("/category/{category}")
     public List<Product> getByCategory(@PathVariable String category) {
         return service.getProductsByCategory(category);
     }
 
-    // ✅ ADD PRODUCT
+    // ADD PRODUCT
     @PostMapping("/add")
     public Product addProduct(@RequestBody Product product) {
         return service.saveProduct(product);
     }
 
-    // ✅ UPDATE PRODUCT
+    // UPDATE PRODUCT
     @PutMapping("/update/{id}")
     public Product updateProduct(@PathVariable Long id, @RequestBody Product product) {
         return service.updateProduct(id, product);
     }
 
-    // ✅ DELETE PRODUCT
+    // DELETE PRODUCT
     @DeleteMapping("/delete/{id}")
     public String deleteProduct(@PathVariable Long id) {
         service.deleteProduct(id);

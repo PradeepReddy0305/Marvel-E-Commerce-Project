@@ -15,7 +15,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import AdminProducts from './pages/AdminProducts';
 
 
-// 🔐 ADMIN ROUTE (VERY IMPORTANT)
+// ADMIN ROUTE (VERY IMPORTANT)
 const AdminRoute = ({ children }) => {
   const user = JSON.parse(localStorage.getItem("user"));
 
