@@ -7,7 +7,7 @@ function MyOrders() {
   const [orders, setOrders] = useState([]);
   const user = JSON.parse(localStorage.getItem("user"));
 
-  // ✅ 1. Fixed the Fetch logic to use the identifier from your backend logic
+  // Fixed the Fetch logic to use the identifier from your backend logic
   const fetchOrders = async () => {
     if (!user) return;
     try {
@@ -129,10 +129,10 @@ function MyOrders() {
                     style={{
                       color:
                         order.deliveryStatus === "PENDING"
-                          ? "#FFA500"   // 🟡 ORANGE (pending)
+                          ? "#FFA500"   // ORANGE (pending)
                           : order.deliveryStatus === "DELIVERED"
-                          ? "#32CD32"   // 🟢 GREEN
-                          : "#FF0000"   // 🔴 RED (cancelled)
+                          ? "#32CD32"   // GREEN
+                          : "#FF0000"   // RED (cancelled)
                     }}
                   >
                     {order.deliveryStatus}

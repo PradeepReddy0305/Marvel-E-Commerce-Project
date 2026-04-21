@@ -13,13 +13,13 @@ function ProductDetails() {
   const [selectedSize, setSelectedSize] = useState("");
   const [quantity, setQuantity] = useState(1);
 
-  // 🔥 SINGLE useEffect
+  // SINGLE useEffect
   useEffect(() => {
     API.get(`/products/${id}`)
       .then((res) => {
         setProduct(res.data);
 
-        // ✅ default size = M
+        // default size = M
         if (res.data.size) {
           const sizes = res.data.size.split(",");
           if (sizes.includes("M")) {
@@ -76,7 +76,7 @@ function ProductDetails() {
       <ToastContainer />
       <div className="row">
 
-        {/* 🖼 IMAGE */}
+        {/* IMAGE */}
         <div className="col-md-5 text-center">
           <img
             src={product.imageUrl}
@@ -85,7 +85,7 @@ function ProductDetails() {
           />
         </div>
 
-        {/* 📦 DETAILS */}
+        {/* DETAILS */}
         <div className="col-md-7">
 
           <h2>{product.name}</h2>
@@ -98,7 +98,7 @@ function ProductDetails() {
             {product.description}
           </p>
 
-          {/* 👕 SIZE BUTTONS */}
+          {/* SIZE BUTTONS */}
           {product.category?.toLowerCase().trim() === "marvel clothes" &&
             product.size && (
               <div className="mt-3">
@@ -122,7 +122,7 @@ function ProductDetails() {
               </div>
             )}
 
-          {/* 🔢 QUANTITY */}
+          {/* QUANTITY */}
           <div className="mt-3">
             <h5>Quantity:</h5>
 
@@ -143,7 +143,7 @@ function ProductDetails() {
             </div>
           </div>
 
-          {/* 🛒 BUTTON */}
+          {/* Cart BUTTON */}
           <button
             className="btn btn-primary mt-4"
             onClick={addToCart}

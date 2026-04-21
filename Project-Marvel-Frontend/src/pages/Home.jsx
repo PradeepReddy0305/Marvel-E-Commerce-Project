@@ -30,7 +30,7 @@ function Home({ search }) {
     "marvel tools",
   ];
 
-  // 🔥 FETCH PRODUCTS
+  // FETCH PRODUCTS
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -69,7 +69,7 @@ function Home({ search }) {
       return;
     }
     
-    // 👕 LOGIC: Default to "M" for clothes, null for everything else
+    // LOGIC: Default to "M" for clothes, null for everything else
     const defaultSize = product.category?.toLowerCase().trim() === "marvel clothes" ? "M" : null;
 
     try {
@@ -97,7 +97,7 @@ function Home({ search }) {
           ? "WELCOME TO THE MULTIVERSE OF SHIPPING"
           : "WELCOME TO THE MULTIVERSE OF SHOPPING"}</h1>
 
-      {/* 🟡 CATEGORIES */}
+      {/* CATEGORIES */}
       <div className="d-flex flex-wrap justify-content-center gap-3 mb-4">
         {categories.map((cat) => (
           <button
@@ -111,7 +111,7 @@ function Home({ search }) {
         ))}
       </div>
 
-      {/* 🛍 PRODUCTS */}
+      {/* PRODUCTS */}
       <div className="product-grid">
         {products.map((p) => (
 
@@ -119,7 +119,7 @@ function Home({ search }) {
             className="product-card"
             key={p.id}
 
-            // ❌ DISABLE CLICK FOR ADMIN
+            // DISABLE CLICK FOR ADMIN
             onClick={() => {
               if (!user || user.role !== "ROLE_ADMIN") {
                 navigate(`/product/${p.id}`);
@@ -135,7 +135,7 @@ function Home({ search }) {
               <h6>{p.name}</h6>
               <p>${p.price}</p>
 
-              {/* ❌ HIDE FOR ADMIN */}
+              {/* HIDE FOR ADMIN */}
               {user?.role !== "ROLE_ADMIN" && (
                 <button
                   className="add-btn"

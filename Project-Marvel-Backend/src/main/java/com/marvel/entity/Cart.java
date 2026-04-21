@@ -9,12 +9,12 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // 🔥 USER RELATION
+    // USER RELATION
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-    // 🔥 PRODUCT RELATION
+    // PRODUCT RELATION
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;

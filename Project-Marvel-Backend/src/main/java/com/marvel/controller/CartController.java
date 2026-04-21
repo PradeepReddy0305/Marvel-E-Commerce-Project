@@ -18,7 +18,7 @@ public class CartController {
     @Autowired
     private CartService service;
 
-    // ✅ ADD TO CART
+    // ADD TO CART
     @PostMapping("/add")
     public Cart addToCart(@RequestBody Map<String, Object> data) {
 
@@ -30,13 +30,13 @@ public class CartController {
         return service.addToCart(userId, productId, quantity, size);
     }
 
-    // ✅ GET CART
+    // GET CART
     @GetMapping("/{userId}")
     public List<Cart> getCart(@PathVariable Long userId) {
         return service.getUserCart(userId);
     }
 
-    // ✅ DELETE ITEM
+    // DELETE ITEM
     @DeleteMapping("/{id}")
     public void deleteItem(@PathVariable Long id) {
         service.removeItem(id);

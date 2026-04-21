@@ -31,7 +31,7 @@ public class JwtFilter extends OncePerRequestFilter {
             try {
                 String email = jwtUtil.extractEmail(token);
 
-                // 🔥 GET ROLE FROM TOKEN
+                // GET ROLE FROM TOKEN
                 String role = jwtUtil.extractRole(token);
 
                 if (email != null && role != null) {

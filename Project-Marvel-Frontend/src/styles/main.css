@@ -152,17 +152,6 @@ img {
   cursor: pointer;
 }
 
-/* ================= SOCIAL BUTTONS ================= */
-.social-btn.google {
-  background-color: #17141E;
-  border: 1px solid #6A6A6A;
-}
-
-.social-btn.facebook {
-  background-color: #1877f2;
-  color: white;
-}
-
 /* ================= DIVIDER ================= */
 .divider {
   text-align: center;

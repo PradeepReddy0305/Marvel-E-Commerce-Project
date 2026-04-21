@@ -9,13 +9,13 @@ function AdminDashboard() {
     fetchAllOrders()
   }, [])
 
-  // ✅ FETCH ALL ORDERS
+  // FETCH ALL ORDERS
   const fetchAllOrders = async () => {
     try {
       const res = await API.get("/orders/all")
-      console.log("Orders:", res.data); // 🔥 debug
+      // console.log("Orders:", res.data); // debug
 
-      // 🔥 PRIORITY MAP
+      // PRIORITY MAP
       // 1 = Top (Pending), 2 = Middle (Delivered), 3 = Bottom (Cancelled)
       const statusPriority = {
         "PENDING": 1,
@@ -23,7 +23,7 @@ function AdminDashboard() {
         "CANCELLED": 3
       }
 
-      // 🔥 SORTING LOGIC
+      // SORTING LOGIC
       const sortedOrders = res.data.sort((a, b) => {
         return statusPriority[a.deliveryStatus] - statusPriority[b.deliveryStatus]
       })
@@ -35,10 +35,10 @@ function AdminDashboard() {
     }
   }
 
-  // ✅ FIXED HERE (REMOVED /api)
+  // FIXED HERE (REMOVED /api)
   const markDelivered = async (id) => {
     try {
-      await API.put(`/orders/deliver/${id}`) // ✅ CORRECT
+      await API.put(`/orders/deliver/${id}`) // CORRECT
       fetchAllOrders()
     } catch (err) {
       console.error(err)
@@ -98,8 +98,8 @@ function AdminDashboard() {
                 <td>${order.totalPrice}</td>
 
                 <td style={{
-                  color: order.deliveryStatus === "DELIVERED" ? '#32CD32' : // 🟢 Green
-                    order.deliveryStatus === "CANCELLED" ? '#FF0000' : // 🔴 Red
+                  color: order.deliveryStatus === "DELIVERED" ? '#32CD32' : // Green
+                    order.deliveryStatus === "CANCELLED" ? '#FF0000' : // Red
                       '#FFA500'
                 }}>{order.deliveryStatus}</td>
 

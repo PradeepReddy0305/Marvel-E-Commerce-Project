@@ -18,7 +18,7 @@ public class AuthService {
     @Autowired
     private BCryptPasswordEncoder encoder;
 
-    // 🔐 REGISTER
+    // REGISTER
     public String register(User user) {
         Optional<User> existing = repo.findByEmail(user.getEmail());
 
@@ -39,7 +39,7 @@ public class AuthService {
         return "User registered successfully";
     }
 
-    // 🔐 LOGIN
+    // LOGIN
     public User login(String email, String password) {
         Optional<User> userOpt = repo.findByEmail(email);
 

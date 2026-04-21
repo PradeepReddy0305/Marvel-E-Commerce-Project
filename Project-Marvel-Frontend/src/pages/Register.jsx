@@ -15,7 +15,7 @@ function Register() {
     }
 
     try {
-      // 1. Step: Register the User
+      // Register the User
       await API.post("/auth/register", user)
       
       // 2. Step: Auto-Login immediately after registration

@@ -25,11 +25,11 @@ function OrderPlacing() {
   const handlePlaceOrder = async (e) => {
     e.preventDefault();
     
-    // Fix 1: Restored cart retrieval (Teammate had this commented out)
+    // Restored cart retrieval (Teammate had this commented out)
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const user = JSON.parse(localStorage.getItem("user"));
 
-    // Fix 2: Keep Teammate's strict login validation
+    // Keep Teammate's strict login validation
     if (!user) {
       toast.error("Please login to place an order! 🔑");
       navigate('/login');
@@ -41,7 +41,7 @@ function OrderPlacing() {
       return;
     }
 
-    // Fix 3: Merged Payload Logic
+    // Merged Payload Logic
     const ordersPayload = cart.map(item => ({
       username: user.email || "Unknown Hero", 
       itemName: item.name,
