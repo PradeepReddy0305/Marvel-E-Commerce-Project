@@ -1,0 +1,25 @@
+SELECT * FROM marvelstoredb.products;
+use marvelstoredb;
+
+-- Category: Marvel Tools
+INSERT INTO products (name, description, price, image_url, category) VALUES 
+('Mjolnir Replica', 'A full-scale, 1:1 ratio hammer made of heavy polystone. Features etched Norse runes.', 150.00, 'https://shoppingnest.in/cdn/shop/files/3_37ab4907-0413-4dd0-be33-2c8475b6029a.jpg?v=1748683799&width=1946', 'marvel tools'),
+('Stormbreaker', 'An enormous replica of Thors axe-hammer. Features a wood-grain handle.', 180.00, 'https://i.redd.it/s7rx6nj1ncu41.jpg', 'marvel tools'),
+('Caps Shield Metal', 'A 24-inch vibranium-style aluminum shield with adjustable leather straps.', 200.00, 'https://m.media-amazon.com/images/I/618u1g+LppL._AC_UF1000,1000_QL80_.jpg', 'marvel tools'),
+('Iron Man Helmet', 'A wearable MK 7 helmet with a magnetic faceplate that opens and closes.', 120.00, 'https://i.etsystatic.com/35783435/r/il/212db5/5143440695/il_fullxfull.5143440695_nujs.jpg', 'marvel tools'),
+('Lokis Daggers', 'A pair of golden-hilted curved daggers used by the God of Mischief.', 90.00, 'https://dl2.myminifactory.com/object-assets/60d8a25f5fe43/images/208348390-327307918992753-2126682841137103954-n-1.jpg', 'marvel tools'),
+('Black Widow Batons', 'A set of two tactical batons that can be joined together.', 80.00, 'https://cdna.artstation.com/p/assets/images/images/070/787/482/large/henry-ituarte-batons11.jpg?1703520356', 'marvel tools'),
+('Winter Soldier Book', 'A leather-bound replica of the red Soviet book used to trigger Bucky.', 45.00, 'https://i.pinimg.com/474x/5a/7b/60/5a7b60c7c8ce43e6708b536a13fb708a.jpg', 'marvel tools'),
+('TVA Handbook', 'An orange, spiral-bound Miss Minutes guide to the Time Variance Authority.', 30.00, 'https://static.wikia.nocookie.net/marvelmovies/images/e/ef/TVA_Official_Handbook_LS2E3.png/revision/latest?cb=20231022151700', 'marvel tools'),
+('Eye of Agamotto', 'A wearable pendant with a mechanical iris that opens to reveal the Time Stone.', 75.00, 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm6Xu3k1Z9-Kdzv066Arsjvc4PZDbMbMF1iGqLQ_lm3BlmypWv2wIGmMHcFDGkKSgTzXkW653uOkyrSIshtqP4lZmZku-WpEFDmUE9TzWCpIx1MpEQx09P4ZboU5Gb-z1XSW3jIzdGQr75BDvITrYhOIuAwSeFl3sEGhklrD_Nv6C4bdriF7_p1AsD/s2047/20230108_165320.jpg', 'marvel tools'),
+('Web-Shooters Pro', 'A pair of wearable wrist devices with pressurized air canisters to shoot silly string.', 60.00, 'https://di2ponv0v5otw.cloudfront.net/posts/2023/06/03/647bc9ecc5df6cd4a78ec63a/m_wp_647bca1424237af314cf6ffd.webp', 'marvel tools'),
+('Hawkeyes Bow', 'A collapsible recurve bow replica. Does not fire real arrows.', 110.00, 'https://i.pinimg.com/736x/08/3b/ed/083beddc10e3856dd71cf27e3d5a94dd.jpg', 'marvel tools'),
+('Infinity Gauntlet', 'A wearable electronic gauntlet with articulated fingers and six light-up stones.', 130.00, 'https://i.etsystatic.com/19286482/r/il/b267ee/1959067419/il_fullxfull.1959067419_kmmn.jpg', 'marvel tools'),
+('Star-Lord Blasters', 'A twin set of Peter Quills blasters with movie-accurate weathering.', 95.00, 'https://i.redd.it/i-finally-finished-the-replica-of-star-lords-blasters-the-v0-m2mzj2ysg23a1.jpg?width=3589&format=pjpg&auto=webp&s=a2a778a3cb07e21e468d76b319c8372e98e840c0', 'marvel tools'),
+('Kimoyo Beads', 'A set of black Wakandan beads that light up with blue symbols.', 40.00, 'https://m.media-amazon.com/images/I/615netLfGIL._AC_UY1100_.jpg', 'marvel tools'),
+('Ten Rings Set', 'Ten wearable metal rings that can be stored on a custom display stand.', 140.00, 'https://cdna.artstation.com/p/assets/images/images/047/531/232/large/andrew-crossen-70399c67-5bec-44f3-9c75-2a45406ca508.jpg?1647829711', 'marvel tools'),
+('Yandis Yaka Arrow', 'A metallic arrow replica that comes with a whistle-activated display stand.', 55.00, 'https://i.etsystatic.com/14025851/r/il/5a0a18/4779157406/il_fullxfull.4779157406_ddb4.jpg', 'marvel tools'),
+('Hulkbuster Gauntlet', 'A massive gauntlet with jackhammer-punching action and sound effects.', 85.00, 'https://i.ytimg.com/vi/-aGzjsI_ncY/maxresdefault.jpg', 'marvel tools'),
+('Daredevil Billy Club', 'A multi-purpose red baton that can be split or connected by a cable.', 70.00, 'https://cdn11.bigcommerce.com/s-7z5ql2ej3b/images/stencil/original/products/260/950/CharlieCoxDaredevilAluminumBillyClubsidebysidefar2__43438.1775340539.jpg?c=1', 'marvel tools'),
+('Ant-Man Pym Particles', 'A display case containing one red and one blue vial of Pym Particle fluid.', 50.00, 'https://nbg1.your-objectstorage.com/yourprops/uploads/images/202503/img_lg_67e2c9789bf056-59977922.jpg', 'marvel tools'),
+('The Tesseract', 'A glowing blue cube containing the Space Stone. This 1:1 scale replica features internal LED lighting and a custom SHIELD display case.', 120.00, 'https://cdna.artstation.com/p/assets/images/images/041/507/782/large/richard-tesseractcontainercloseup.jpg?1631886842', 'marvel tools');
