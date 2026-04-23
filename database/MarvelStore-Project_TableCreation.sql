@@ -60,10 +60,12 @@ CREATE TABLE products (
 
 ALTER TABLE products ADD COLUMN size VARCHAR(100) DEFAULT NULL;
 
+ALTER TABLE products MODIFY COLUMN image_url text;
+
 UPDATE products 
 SET size = 'S, M, L, XL' 
 WHERE category = 'marvel clothes';
 
-update products set image_url = "https://i.etsystatic.com/31372700/r/il/19c77e/6813591532/il_fullxfull.6813591532_2kfn.jpg" where id = 88;
+# update products set image_url = "https://i.etsystatic.com/31372700/r/il/19c77e/6813591532/il_fullxfull.6813591532_2kfn.jpg" where id = 88;
 
 
